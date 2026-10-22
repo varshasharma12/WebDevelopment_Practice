@@ -7,7 +7,6 @@ const arr1=arr.slice(1,3) //It will give the array of selected elements
 console.log(arr1)
 console.log("arr",arr)
 
-
 const arr2=arr.splice(1,3)  //It will remove and add the elements 
 //Original  array will change 
 console.log(arr2)
