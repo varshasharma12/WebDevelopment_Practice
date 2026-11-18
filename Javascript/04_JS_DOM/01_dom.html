@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="heading">Welcome to learning DOM!!</h1>
+    <p id="content">Hello World I am DOM</p>
+    <button id="change-btn">Change Heading</button>
+    <h2 id="heading-2">List of 3CA CRS</h2>
+
+    <label for="cr-input"></label>
+    <input type="text" id="cr-input" placeholder="Enter CR NAme">
+    <button id="add-cr-btn">Add CR</button>
+    <script>
+        const heading=document.querySelector("#title");
+        const changeButton=document.getElementById("change-btn");
+        changeButton.addEventListener('mouseover',function(){
+            heading.textContent="heading is changed by click event";
+            heading.style.color='red';
+        });
+        function addCrs(CrName){
+
+            const ul=document.createElement("ul");
+            const li=document.createElement("li"); 
+            li.innerTest=`${CrName}`;
+            ul.appendchild(li);
+            console.log(ul);
+            document.body.appendChild(ul);
+            addEventListener('keydown',function(event){
+                console.log(event)
+                if(event=="Enter"){
+                addCrs()
+            }
+        })
+    }
+    const addCRButton= document.getElementById("add-cr-btn");
+    addCRButton.addEventListener('click',function(){
+        console.log("event called"),
+        addCrs('yashika'),
+        addCrs('vaibhav'),
+        addCrs('vivek'),
+        
+    })
+        /*document.getElementById().style.background
+        document.getElementByClassName()
+        document.querySelectorAll()     */
+    </script>
+
+    
+</body>
+</html>
